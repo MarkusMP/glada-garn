@@ -1,16 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.8;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
+  color: steelblue;
 }
 
-* {
-  box-sizing: border-box;
+p {
+  margin: 10px 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.btns {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btns:hover {
+  opacity: 0.9;
+}
+
+.btns-secondary {
+  font: inherit;
+  font-size: 13px;
+  background: #000;
+  color: #fff !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  opacity: 0.8;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  margin-right: 5px;
+}
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+
+.bg-light {
+  border: none !important;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  max-height: 300px;
+
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel a {
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .sr-only {
+    display: none !important;
+  }
 }
