@@ -11,23 +11,26 @@ export default function ItemPage({ item }) {
         <a className="btns btns-secondary mt-2">Go Back</a>
       </Link>
       <Row className="mt-5">
-        <Col>
+        <Col className="d-flex justify-content-center">
           <Image
             src={
               item.image.formats.medium
                 ? item.image.formats.medium.url
                 : item.image.formats.thumbnail.url
             }
-            height={500}
-            width={600}
+            height={400}
+            width={350}
+            className="m-auto"
           />
         </Col>
         <Col lg={5} className="mt-2">
           <h1>{item.name}</h1>
           <p>{item.description}</p>
-          <ul>
-            <li>Size: {item.size}</li>
-          </ul>
+          {item.size && (
+            <ul>
+              <li>Size: {item.size}</li>
+            </ul>
+          )}
         </Col>
       </Row>
     </Layout>
